@@ -66,14 +66,17 @@ class Contact extends Component {
                                 <Row className="form-group">
                                     <Label htmlFor="firstname" md={2}>First Name</Label>
                                     <Col md={10}>
-                                        <Control.text model=".firstname" id="firstname" name="firstname"
+                                        <Control.text
+                                            model=".firstname" 
+                                            id="firstname" 
+                                            name="firstname"
                                             placeholder="First Name"
                                             className="form-control"
                                             validators={{
                                                 required, minLength:minLength(3), maxLength: maxLength(10)
-                                            }}
-                                            />
-                                        <Errors 
+                                            }}>
+                                        </Control.text> 
+                                        <Errors
                                         className="text-danger"
                                         model = '.firstname'
                                         show = "touched"
@@ -81,8 +84,8 @@ class Contact extends Component {
                                             required: 'Required', 
                                             minLength: 'Must be greater than 2 characters',
                                             maxLength: 'Must be 15 characters or less'
-                                        }}
-                                    />
+                                        }}>
+                                        </Errors>
                                     </Col>
                                     
                                 </Row>
